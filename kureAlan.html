@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Küre Alanı Hesaplama</title>
+    <script language="javascript">
+        //fonksiyonu tanımladık.
+        function hesapla(){
+        //text kutusu içindeki değeri okuyup sayi değişkenine aktarıyoruz.
+        var sayi=document.getElementById("yaricap").value;
+         
+        //text kutusuna girilen değerler metinsel türdedir. Hesaplama yapabilmek için sayıya çeviriyoruz.
+        sayi=Number(sayi);
+        var alan=4*Math.PI*sayi*sayi;
+        alert("Kürenin Alanı:"+alan.toFixed(2));
+         
+        }
+         
+         
+        //hesaplama yapması için hesap butonunu seçiyoruz.
+        var hesapBtn=document.getElementById("hesapla");
+         
+        //fonksiyonu olaya bağlıyoruz.
+        hesapBtn.onclick=hesapla;
+         
+         
+        </script>
+</head>
+<body>
+    <input type="text" id="yaricap" placeholder="Yarı çap uzunluğunu girin"> 
+<input type="button" value="Küre Alanı Hesapla" id="hesapla"onclick="javascript:hesapla()">
+
+</body>
+</html>
